@@ -74,16 +74,18 @@ td {
 
 @font-face {
     font-family: 'PP Neue Montreal';
-    font-weight: normal;
-    font-style: 400;
-    src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/NeueMontreal-Regular_1.woff') format('woff');
 }
+
 @font-face {
     font-family: 'PP Neue Montreal';
     font-weight: 500;
     font-style: normal;
     src: url('../fonts/ppneuemontreal-medium.woff') format('woff');
 }
+
 @font-face {
     font-family: 'ABeeZee';
     font-weight: 400;
@@ -92,7 +94,7 @@ td {
 }
 
 
-*{
+* {
     box-sizing: border-box;
 
 }
@@ -183,26 +185,30 @@ img {
 html {
     font-size: calc(100vw / 1440 * 10);
 }
+
 @media (max-width: 1024) {
     html {
         font-size: calc(100vw / 768 * 10);
     }
-   }
+}
+
 @media (max-width: 767px) {
     html {
         font-size: calc(100vw / 500 * 10);
     }
+
     .main {
         flex: 0;
     }
-   }
+}
+
 @media (max-width: 500px) {
     html {
         font-size: calc(100vw / 375 * 10);
     }
-   }
+}
 
-   .container {
+.container {
     max-width: 137.5rem;
     margin: 0 auto;
     padding: 0 15px;
@@ -212,41 +218,46 @@ html {
 
 
 
-.ticker{
+.ticker {
     overflow: hidden;
     position: relative;
     z-index: 6;
 }
 
-.ticker__wrapper{
+.ticker__wrapper {
     display: flex;
     width: 100%;
     background: #F5991A;
     padding: 1rem 0;
     /* justify-content: space-between; */
 }
-.ticker-animation{
+
+.ticker-animation {
     flex-shrink: 0;
     padding-right: 2rem;
     font-size: 1.2rem;
-font-style: normal;
-font-weight: 500;
-line-height: 100%; /* 12px */
-text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 12px */
+    text-transform: uppercase;
     animation: trickerAnimation 5s linear infinite;
     position: relative;
 
 }
-.ticker-animation h6{
+
+.ticker-animation h6 {
     font-family: PP Neue Montreal;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 12px */
+    line-height: 100%;
+    /* 12px */
     text-transform: uppercase;
     color: #2C1C00;
 }
-.ticker-animation::after{
+
+.ticker-animation::after {
     content: '';
     position: absolute;
     height: 0.3rem;
@@ -263,30 +274,34 @@ text-transform: uppercase;
     0% {
         transform: translateZ(0)
     }
+
     to {
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
     }
 }
 
 
-.header{
+.header {
     position: absolute;
     left: 0;
     right: 0;
     top: 4.7rem;
     z-index: 1;
 }
+
 .header__container {
     display: flex;
     justify-content: space-between;
 }
+
 .header__number {
     display: flex;
     align-items: center;
     gap: 1.1rem;
 }
-.header__number-link {
-}
+
+.header__number-link {}
+
 .header__link {
     color: #181818;
     font-variant-numeric: lining-nums proportional-nums;
@@ -300,8 +315,9 @@ text-transform: uppercase;
     text-transform: uppercase;
     cursor: pointer;
 }
-.logo {
-}
+
+.logo {}
+
 .button {
     border-radius: 5rem;
     background: #F5991A;
@@ -314,7 +330,8 @@ text-transform: uppercase;
 
     /* 16px */
 }
-.button span{
+
+.button span {
     color: #181818;
     font-variant-numeric: lining-nums proportional-nums;
     font-feature-settings: 'hlig' on, 'dlig' on;
@@ -327,7 +344,7 @@ text-transform: uppercase;
     padding-left: 1.1rem;
 }
 
-.button span::before{
+.button span::before {
     content: '';
     height: 0.5rem;
     width: 0.5rem;
@@ -339,7 +356,8 @@ text-transform: uppercase;
     border-radius: 50%;
 
 }
-.header__btn span{
+
+.header__btn span {
     font-size: 1.6rem;
 }
 
@@ -347,18 +365,19 @@ text-transform: uppercase;
 
 
 
-.banner{
+.banner {
     /* margin-top: 14.1rem; */
     /* margin-top: 9.7rem; */
     padding-top: 9.7rem;
-    background: #FFFCE8; 
- overflow: hidden;
- max-block-size: 89.5rem;
-position: relative;
+    background: #FFFCE8;
+    overflow: hidden;
+    max-block-size: 89.5rem;
+    position: relative;
 
     padding-bottom: 86px;
 }
-.banner::after{
+
+.banner::after {
     content: '';
     position: absolute;
     height: 20rem;
@@ -371,23 +390,26 @@ position: relative;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .banner__content {
     display: flex;
 }
 
 .banner__title {
     color: #2C1C00;
-font-variant-numeric: lining-nums proportional-nums;
-font-feature-settings: 'hlig' on, 'dlig' on;
-font-family: PP Neue Montreal;
-font-size: 5rem;
-width: 64rem;
-font-style: normal;
-font-weight: 450;
-line-height: 100%; /* 50px */
-/* margin-bottom: 15.4rem; */
-margin-bottom: 9.7rem;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 5rem;
+    width: 64rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%;
+    /* 50px */
+    /* margin-bottom: 15.4rem; */
+    margin-bottom: 9.7rem;
 }
+
 .title-link {
     color: #F5991A;
     font-variant-numeric: lining-nums proportional-nums;
@@ -396,10 +418,12 @@ margin-bottom: 9.7rem;
     font-size: 5rem;
     font-style: normal;
     font-weight: 450;
-    line-height: 100%; /* 50px */
+    line-height: 100%;
+    /* 50px */
     position: relative;
 }
-.title-link::before{
+
+.title-link::before {
     content: '';
     position: absolute;
     background: #F5991A;
@@ -408,6 +432,7 @@ margin-bottom: 9.7rem;
     right: 0;
     bottom: 0;
 }
+
 .banner__result {
     border-radius: 1rem;
     background: #FFF;
@@ -424,10 +449,12 @@ margin-bottom: 9.7rem;
     line-height: 100%;
     /* 25px */
 }
+
 .banner__price {
     margin-top: 2.6rem;
     display: flex;
 }
+
 .banner__price-old {
     color: #2C1C00;
     font-variant-numeric: lining-nums proportional-nums;
@@ -463,21 +490,25 @@ margin-bottom: 9.7rem;
     line-height: 100%;
     /* 67px */
 }
+
 .banner__content-left__bottom {
     margin-top: 2rem;
     display: flex;
     position: relative;
     z-index: 4;
 }
-.banner__btn{
+
+.banner__btn {
     padding: 2.5rem 4rem;
 }
+
 .clock {
     display: flex;
     position: relative;
     margin-left: 4.6rem;
 
 }
+
 .clock__content {
     border-radius: 87px;
     padding: 1.3rem 4.3rem;
@@ -485,48 +516,54 @@ margin-bottom: 9.7rem;
     display: flex;
     flex-direction: column;
 }
-.clock_svg{
+
+.clock_svg {
     position: absolute;
     height: 100%;
     left: -6rem;
 }
+
 .clock__content-text {
     color: #2C1C00;
-font-variant-numeric: lining-nums proportional-nums;
-font-feature-settings: 'hlig' on, 'dlig' on;
-font-size: 1.2rem;
-font-style: normal;
-font-weight: 400;
-line-height: 100%; /* 12px */
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 12px */
 
 }
+
 .clock__content-oclock {
     color: #2C1C00;
-font-variant-numeric: lining-nums proportional-nums;
-font-feature-settings: 'hlig' on, 'dlig' on;
-font-family: PP Neue Montreal;
-font-size: 3.5rem;
-font-style: normal;
-font-weight: 450;
-line-height: 100%; /* 35px */
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%;
+    /* 35px */
 }
-.banner__content-right__img{
+
+.banner__content-right__img {
     position: relative;
-    /* z-index: 5; */
     bottom: -2rem;
 }
-.banner__content-right{
+
+.banner__content-right {
     position: absolute;
     right: 0;
     top: -2rem;
-    /* z-index: 4; */
     height: 75.8rem;
     width: 71%;
     display: flex;
     justify-content: flex-end;
-    
+
 }
-.banner__content-right::before{
+
+.banner__content-right::before {
     content: '';
     position: absolute;
     background-image: url('../img/main/back.svg');
@@ -539,8 +576,6 @@ line-height: 100%; /* 35px */
     bottom: 0;
     width: 100%;
     height: 100%;
-    /* z-index: 1; */
-    /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -548,57 +583,64 @@ line-height: 100%; /* 35px */
 
 
 @media (max-width: 1282px) {
-    .banner__content-right::before{
+    .banner__content-right::before {
         background-size: cover;
     }
-    .banner__content-right__img{
+
+    .banner__content-right__img {
         bottom: -6rem;
     }
 }
+
 @media (max-width: 767px) {
-    .banner{
+    .banner {
         display: flex;
         flex-direction: column;
         max-block-size: 100%;
         /* border-radius: 10% 10% 53% 47% / 0% 0% 9% 10% ; */
         padding-bottom: 0;
     }
-    .clock__content{
+
+    .clock__content {
         width: 100%;
     }
-    .clock{
+
+    .clock {
         margin-left: 0;
         text-align: center;
     }
-    .clock_svg{
+
+    .clock_svg {
         left: 0;
     }
-    .banner__title{
+
+    .banner__title {
         width: auto;
     }
+
     .header__container {
         justify-content: center;
     }
-    .header__number{
+
+    .header__number {
         display: none;
     }
-    .header__btn{
+
+    .header__btn {
         display: none;
     }
-    /* .banner{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    } */
-    .banner__result{
+
+    .banner__result {
         width: 100%;
         display: block;
     }
+
     .banner__content-left__bottom {
         flex-direction: column;
         margin-top: 2rem;
         display: flex;
     }
+
     .banner__content-right {
         position: relative;
         height: auto;
@@ -606,26 +648,448 @@ line-height: 100%; /* 35px */
         display: flex;
         justify-content: center;
     }
-    .banner{
+
+    .banner {
         margin-bottom: 100px;
     }
-    /* .banner::after {
-        display: none;
-    } */
-    .banner__content-right::before{
+
+    .banner__content-right::before {
         display: none;
     }
-    .banner__title{
+
+    .banner__title {
         font-size: 3rem;
         margin-bottom: 5rem;
     }
-    .banner__btn{
+
+    .banner__btn {
         margin-bottom: .8rem;
     }
+
     .clock {
         margin-bottom: 2.5rem;
         width: 100%;
     }
-    }
+}
 
 
+
+
+
+
+
+.who {
+    position: relative;
+}
+.who::after{
+    content: url('../img/who/tree.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14.5rem;
+height: 40rem;
+z-index: 1;
+}
+.who::before {
+    content: url('../img/who/tree2.png');
+    position: absolute;
+    width: 14.5rem;
+    height: 40rem;
+    z-index: 1;
+    bottom: -21.5rem;
+    right: 7rem;
+}
+
+
+
+.title__wrapper {
+    text-align: center;
+}
+
+.title {
+    color: #2C1C00;
+    text-align: center;
+    font-family: PP Neue Montreal;
+    font-size: 4.5rem; /*5.5rem*/
+    font-style: normal;
+    font-weight: 500;
+    /*400*/
+    line-height: 100%;
+    /* 55px */
+}
+
+.who__title {
+    max-width: 53.6rem;
+    margin: 12rem auto 2.4rem;
+
+}
+
+
+.who__sub-title {
+    color: #2C1C00;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    /*400*/
+    line-height: 100%;
+    /* 16px */
+}
+
+.who__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5.6rem;
+    position: relative;
+    z-index: 2;
+
+}
+
+.who__list-item {
+    display: flex;
+    background: #FFF;
+}
+
+.who__list-item p {
+    padding: 4rem 2.4rem;
+
+    color: #2C1C00;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%;
+    /* 25px */
+}
+.who__btn-wrapper{
+    text-align: center;
+}
+.who__btn{
+    margin-top: 4rem;
+    margin-bottom: 3.8rem;
+}
+
+.img__wrapper {
+    position: relative;
+    height: 34.44rem;
+    width: 33.6rem;
+}
+
+.img__wrapper::after {
+    content: url('../img/who/Group\ 1321314745.svg');
+    position: absolute;
+    right: -1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.who__list-item:nth-child(3n+3) .img__wrapper::after,
+.who__list-item:nth-child(3n+4) .img__wrapper::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.who__list-item:nth-child(3n+3),.who__list-item:nth-child(3n+4){
+    flex-direction: row-reverse;
+}
+.who__list-item:nth-child(3n+3) .img__wrapper::after,.who__list-item:nth-child(3n+4) .img__wrapper::after{
+    left: -1.4rem;
+    right: auto;
+}
+
+.who__list-item__img {
+    height: 100%;
+    width: 100%;
+}
+
+.about {
+    padding-top: 8rem;
+    position: relative;
+    z-index: 2;
+}
+.about::before{
+    content: url('../img/about/Tape.png');
+    position: absolute;
+    height: 10.4rem;
+width: 20rem;
+    left: 0;
+    top: -20rem;
+    z-index: 1;
+}
+.about__container{
+    display: flex;
+}
+
+.about__content-left-img{
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+}
+.about__content-left-img__wrapper {
+    width: 71.2rem;
+height: 74.4rem;
+position: relative;
+z-index: 2;
+}
+.about__content-right {
+    padding: 4rem;
+    padding-right: 5.4rem;
+    border-radius: 2rem;
+background: #FFFCE8;
+height: 74.4rem;
+width: 71.2rem;
+}
+
+.about__content-right--title {
+    margin: 0;
+}
+
+.about__content-right__list {
+    margin: 3.6rem 0 2.4rem;
+    display: flex;
+}
+.about__content-right__list-item__img {
+    border-radius: 14px;
+}
+.about__content-right__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.about__content-right__text p {
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 110%; /* 23.1px */
+}
+.about__content-btn{
+    width: 33rem;
+    padding: 2.5rem 4rem;
+}
+.middle {
+    padding-top: 12rem;
+    padding-bottom: 23.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.middle__container{
+    position: relative;
+}
+
+.middle::before{
+    content: url('../img/midlle/Tape2.png');
+    position: absolute;
+
+
+    right: 0;
+    top: -6rem;
+    z-index: 1;
+}
+.middle::after {
+    content: '';
+    position: absolute;
+    height: 12rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image: url('../img/midlle/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title--midle{
+    width: 68rem;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+}
+
+
+
+.advantages {
+    background-color: #FFFCE8;;
+}
+
+
+.advantages__text-wrapper {
+    display: flex;
+    gap: 12rem;
+    margin-bottom: 5.6rem;
+}
+
+.advantages__title {
+    text-align: left;
+    width: 63.3rem;
+}
+
+.advantages__text {
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 530;
+line-height: 100%; /* 16px */
+display: flex;
+flex-direction: column;
+gap: 2rem;
+width: 60rem;
+}
+
+
+
+.advantages__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 8rem;
+}
+.advantages__list-item {
+    border-radius: 2rem;
+background: #FFF;
+width: 33.2rem;
+overflow: hidden;
+}
+.advantages__list-item__wrapper {
+    width: 33.2rem;
+    height: 27.6rem;
+}
+.advantages__list-item__wrapper-img {
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+}
+.advantages__list-item__bottom {
+    padding: 0 1.6rem;
+}
+.advantages__list-item__title{
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;/* 400 */
+    line-height: 100%; 
+    letter-spacing: -0.4px;
+    margin: 1.6rem 0 4rem;
+}
+
+.advantages__list-item__btn {
+    color: #2C1C00;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    /* 400 */
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-right: 1.6rem;
+    position: relative;
+}
+.advantages__list-item__btn::after{
+    content: url('../img/advantages/arrow.svg');
+    position: absolute;
+    right: 0;
+}
+.advantages__list-item p{
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 1.6rem;
+    margin-top: 2.6rem;
+    font-style: normal;
+    font-weight: 500; /* 400 */
+    line-height: 110%; /* 17.6px */
+    letter-spacing: -0.32px;
+    max-height: 0;
+}
+
+.advantages__list-item.active p{
+    max-height: auto;
+}
+
+
+.advantages__content-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    padding-bottom: 12.2rem;
+}
+.advantages__bottom {
+    color: #2C1C00;
+font-variant-numeric: lining-nums proportional-nums;
+font-feature-settings: 'hlig' on, 'dlig' on;
+font-family: PP Neue Montreal;
+font-size: 2.1rem;
+font-style: normal;
+font-weight: 500; /*400*/
+line-height: 100%;
+width: 46.8rem;
+}
+
+.title-link--advantages {
+    color: #F5991A;
+    font-family: PP Neue Montreal;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 500; /*400*/
+    line-height: 100%;
+    /* 21px */
+}
+
+
+
+
+
+.how {
+    padding: 4rem 0;
+    background-color: #FFFFFF;
+}
+.container {
+}
+.how__container {
+}
+.how__content-left {
+    width: 56.3rem;
+}
+.how__content-left-title {
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 5.5rem;
+font-style: normal;
+font-weight: 500; /*400*/
+line-height: 100%; /* 55px */
+margin-bottom: 19.5rem;
+}
+.how__content-left__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 4rem;
+    gap: 4rem;
+}
+.how__content-left__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500; /*400*/
+    line-height: 100%;
+    /* 20px */
+    letter-spacing: -0.4px;
+}
+.button {
+}
