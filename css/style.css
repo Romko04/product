@@ -1,0 +1,631 @@
+/*Обнулення*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-weight: normal;
+    font-style: 400;
+    src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/ppneuemontreal-medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'ABeeZee';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/ABeeZee-Regular.ttf') format('woff');
+}
+
+
+*{
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #FEF9D2;
+}
+
+/* .body--lock {
+    overflow: hidden;
+} */
+
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.scroll--block {
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+}
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+html {
+    font-size: calc(100vw / 1440 * 10);
+}
+@media (max-width: 1024) {
+    html {
+        font-size: calc(100vw / 768 * 10);
+    }
+   }
+@media (max-width: 767px) {
+    html {
+        font-size: calc(100vw / 500 * 10);
+    }
+    .main {
+        flex: 0;
+    }
+   }
+@media (max-width: 500px) {
+    html {
+        font-size: calc(100vw / 375 * 10);
+    }
+   }
+
+   .container {
+    max-width: 137.5rem;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* position: relative; */
+}
+
+
+
+
+.ticker{
+    overflow: hidden;
+    position: relative;
+    z-index: 6;
+}
+
+.ticker__wrapper{
+    display: flex;
+    width: 100%;
+    background: #F5991A;
+    padding: 1rem 0;
+    /* justify-content: space-between; */
+}
+.ticker-animation{
+    flex-shrink: 0;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 12px */
+text-transform: uppercase;
+    animation: trickerAnimation 5s linear infinite;
+    position: relative;
+
+}
+.ticker-animation h6{
+    font-family: PP Neue Montreal;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 12px */
+    text-transform: uppercase;
+    color: #2C1C00;
+}
+.ticker-animation::after{
+    content: '';
+    position: absolute;
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: #2C1C00;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+}
+
+
+
+@keyframes trickerAnimation {
+    0% {
+        transform: translateZ(0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
+}
+
+
+.header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4.7rem;
+    z-index: 1;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+.header__number {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+.header__number-link {
+}
+.header__link {
+    color: #181818;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 14px */
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.logo {
+}
+.button {
+    border-radius: 5rem;
+    background: #F5991A;
+    box-shadow: 0.3rem 0.4rem 1.4rem 0 rgba(245, 153, 26, 0.40);
+    border: none;
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    position: relative;
+    /* z-index: 7; */
+
+    /* 16px */
+}
+.button span{
+    color: #181818;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+.button span::before{
+    content: '';
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #181818;
+    border-radius: 50%;
+
+}
+.header__btn span{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+.banner{
+    /* margin-top: 14.1rem; */
+    /* margin-top: 9.7rem; */
+    padding-top: 9.7rem;
+    background: #FFFCE8; 
+ overflow: hidden;
+ max-block-size: 89.5rem;
+position: relative;
+
+    padding-bottom: 86px;
+}
+.banner::after{
+    content: '';
+    position: absolute;
+    height: 20rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image: url('../img/hero/plaahka.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner__content {
+    display: flex;
+}
+
+.banner__title {
+    color: #2C1C00;
+font-variant-numeric: lining-nums proportional-nums;
+font-feature-settings: 'hlig' on, 'dlig' on;
+font-family: PP Neue Montreal;
+font-size: 5rem;
+width: 64rem;
+font-style: normal;
+font-weight: 450;
+line-height: 100%; /* 50px */
+/* margin-bottom: 15.4rem; */
+margin-bottom: 9.7rem;
+}
+.title-link {
+    color: #F5991A;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 50px */
+    position: relative;
+}
+.title-link::before{
+    content: '';
+    position: absolute;
+    background: #F5991A;
+    height: 0.4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.banner__result {
+    border-radius: 1rem;
+    background: #FFF;
+    padding: 1rem 2rem;
+    display: inline;
+    color: #2C1C00;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%;
+    /* 25px */
+}
+.banner__price {
+    margin-top: 2.6rem;
+    display: flex;
+}
+.banner__price-old {
+    color: #2C1C00;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 4.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 41px */
+    position: relative;
+    margin-right: 1.6rem;
+}
+
+.banner__price-old::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 33%;
+    height: 0.3rem;
+    background-color: #2C1C00;
+}
+
+.banner__price-current {
+    color: #F5991A;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'hlig' on, 'dlig' on;
+    font-family: PP Neue Montreal;
+    font-size: 6.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    /* 67px */
+}
+.banner__content-left__bottom {
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+    z-index: 4;
+}
+.banner__btn{
+    padding: 2.5rem 4rem;
+}
+.clock {
+    display: flex;
+    position: relative;
+    margin-left: 4.6rem;
+
+}
+.clock__content {
+    border-radius: 87px;
+    padding: 1.3rem 4.3rem;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+.clock_svg{
+    position: absolute;
+    height: 100%;
+    left: -6rem;
+}
+.clock__content-text {
+    color: #2C1C00;
+font-variant-numeric: lining-nums proportional-nums;
+font-feature-settings: 'hlig' on, 'dlig' on;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 12px */
+
+}
+.clock__content-oclock {
+    color: #2C1C00;
+font-variant-numeric: lining-nums proportional-nums;
+font-feature-settings: 'hlig' on, 'dlig' on;
+font-family: PP Neue Montreal;
+font-size: 3.5rem;
+font-style: normal;
+font-weight: 450;
+line-height: 100%; /* 35px */
+}
+.banner__content-right__img{
+    position: relative;
+    /* z-index: 5; */
+    bottom: -2rem;
+}
+.banner__content-right{
+    position: absolute;
+    right: 0;
+    top: -2rem;
+    /* z-index: 4; */
+    height: 75.8rem;
+    width: 71%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.banner__content-right::before{
+    content: '';
+    position: absolute;
+    background-image: url('../img/main/back.svg');
+    top: 0;
+    bottom: 0;
+    left: 22.2rem;
+    height: 11rem;
+    width: 11rem;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 1282px) {
+    .banner__content-right::before{
+        background-size: cover;
+    }
+    .banner__content-right__img{
+        bottom: -6rem;
+    }
+}
+@media (max-width: 767px) {
+    .banner{
+        display: flex;
+        flex-direction: column;
+        max-block-size: 100%;
+        /* border-radius: 10% 10% 53% 47% / 0% 0% 9% 10% ; */
+        padding-bottom: 0;
+    }
+    .clock__content{
+        width: 100%;
+    }
+    .clock{
+        margin-left: 0;
+        text-align: center;
+    }
+    .clock_svg{
+        left: 0;
+    }
+    .banner__title{
+        width: auto;
+    }
+    .header__container {
+        justify-content: center;
+    }
+    .header__number{
+        display: none;
+    }
+    .header__btn{
+        display: none;
+    }
+    /* .banner{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    } */
+    .banner__result{
+        width: 100%;
+        display: block;
+    }
+    .banner__content-left__bottom {
+        flex-direction: column;
+        margin-top: 2rem;
+        display: flex;
+    }
+    .banner__content-right {
+        position: relative;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .banner{
+        margin-bottom: 100px;
+    }
+    /* .banner::after {
+        display: none;
+    } */
+    .banner__content-right::before{
+        display: none;
+    }
+    .banner__title{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .banner__btn{
+        margin-bottom: .8rem;
+    }
+    .clock {
+        margin-bottom: 2.5rem;
+        width: 100%;
+    }
+    }
+
+
