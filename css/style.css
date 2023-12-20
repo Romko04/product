@@ -629,10 +629,14 @@ height: 40rem;
 z-index: 1;
 }
 .who::before {
-    content: url('../img/who/tree2.png');
+    content: '';
     position: absolute;
+    background-image: url('../img/who/tree2.png');
+    background-size: cover;
+    width: 24rem;
+    height: 24rem;
     z-index: 1;
-    bottom: -21.5rem;
+    bottom: 0;
     right: 7rem;
 }
 
@@ -718,10 +722,14 @@ z-index: 1;
     z-index: 2;
 }
 .about::before{
-    content: url('../img/about/Tape.png');
+    content: '';
     position: absolute;
     height: 10.4rem;
-width: 20rem;
+    width: 20rem;
+    background-image: url('../img/about/Tape.png');
+    background-size: cover;
+    width: 31rem;
+    height: 31rem;
     left: 0;
     top: -20rem;
     z-index: 1;
@@ -749,7 +757,10 @@ background: #FFFCE8;
 height: 74.4rem;
 width: 71.2rem;
 }
-
+.about__content-right__list-item{
+    height: 15rem;
+    width: 15rem;
+}
 .about__content-right--title {
     margin: 0;
 }
@@ -792,9 +803,13 @@ width: 71.2rem;
 }
 
 .middle::before{
-    content: url('../img/midlle/Tape2.png');
+    content: '';
+    background-image: url('../img/midlle/Tape2.png');
     position: absolute;
     right: 0;
+    background-size: cover;
+    width: 77rem;
+    height: 38rem;
     top: -6rem;
     z-index: 1;
 }
@@ -1371,9 +1386,6 @@ background: #FFF;
     .banner__content-right__img {
         bottom: -6rem;
     }
-    .middle::before{
-        top: -36rem;
-    }
 }
 
 
@@ -1531,6 +1543,14 @@ background: #FFF;
     }
     .about__content-btn{
         margin: 0 auto;
+    }
+    .title--midle{
+        max-width: 34rem;
+    }
+    .middle::before{
+        width: 62rem;
+    height: 38rem;
+    top: -15rem;
     }
 }
 
