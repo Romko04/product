@@ -618,11 +618,13 @@ html {
     position: relative;
 }
 .who::after{
-    content: url('../img/who/tree.png');
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
-    width: 14.5rem;
+    background-image: url('../img/who/tree.png');
+    background-size: cover;
+    width: 20.5rem;
 height: 40rem;
 z-index: 1;
 }
@@ -703,18 +705,6 @@ z-index: 1;
     right: -1.4rem;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.who__list-item:nth-child(3n+3) .img__wrapper::after,
-.who__list-item:nth-child(3n+4) .img__wrapper::after {
-    transform: translateY(-50%) rotate(180deg);
-}
-.who__list-item:nth-child(3n+3),.who__list-item:nth-child(3n+4){
-    flex-direction: row-reverse;
-}
-.who__list-item:nth-child(3n+3) .img__wrapper::after,.who__list-item:nth-child(3n+4) .img__wrapper::after{
-    left: -1.4rem;
-    right: auto;
 }
 
 .who__list-item__img {
@@ -1472,7 +1462,61 @@ background: #FFF;
     .who__list-item{
         flex-direction: column;
     }
+    .img__wrapper{
+        width: 100%;
+    }
+    .img__wrapper::after {
+        left: 50%;
+        bottom: -1.4rem;
+    top: auto;
+    transform: translateX(-50%) rotate(-90deg);
+    width: 2.4rem;
+    height: 2.4rem;
+    }
+    .wrapper__content-left__bottom{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .who__title{
+        margin-top: 7rem;
+        max-width: 23.5rem;
+    }
+    .who::after{
+        content: '';
+    width: 13.4rem;
+    height: 23rem;
+    top: -8rem;
+    }
+    .who__container{
+        padding: 0;
+    }
+    .title-link{
+        font-size: 3rem;
+    }
+    .who::before {
+        display: none;
+    }
 }
 
 
 
+
+
+@media (min-width: 768px) {
+
+.who__list-item:nth-child(3n+3) .img__wrapper::after,
+.who__list-item:nth-child(3n+4) .img__wrapper::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.who__list-item:nth-child(3n+3),.who__list-item:nth-child(3n+4){
+    flex-direction: row-reverse;
+}
+.who__list-item:nth-child(3n+3) .img__wrapper::after,.who__list-item:nth-child(3n+4) .img__wrapper::after{
+    left: -1.4rem;
+    right: auto;
+}
+
+
+}
