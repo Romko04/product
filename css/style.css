@@ -76,14 +76,14 @@ td {
     font-family: 'PP Neue Montreal';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/NeueMontreal-Regular_1.woff') format('woff');
+    src: url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'PP Neue Montreal';
     font-weight: 500;
     font-style: normal;
-    src: url('../fonts/ppneuemontreal-medium.woff') format('woff');
+    src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -115,6 +115,19 @@ body {
 /* .body--lock {
     overflow: hidden;
 } */
+.title__wrapper {
+    text-align: center;
+}
+
+.title {
+    color: #2C1C00;
+    text-align: center;
+    font-family: PP Neue Montreal;
+    font-size: 4.5rem; /*5.5rem*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
 
 
 .wrapper {
@@ -450,12 +463,12 @@ html {
     /* 25px */
 }
 
-.banner__price {
+.wrapper__price {
     margin-top: 2.6rem;
     display: flex;
 }
 
-.banner__price-old {
+.wrapper__price-old {
     color: #2C1C00;
     font-variant-numeric: lining-nums proportional-nums;
     font-feature-settings: 'hlig' on, 'dlig' on;
@@ -469,7 +482,7 @@ html {
     margin-right: 1.6rem;
 }
 
-.banner__price-old::before {
+.wrapper__price-old::before {
     content: '';
     position: absolute;
     left: 0;
@@ -479,7 +492,7 @@ html {
     background-color: #2C1C00;
 }
 
-.banner__price-current {
+.wrapper__price-current {
     color: #F5991A;
     font-variant-numeric: lining-nums proportional-nums;
     font-feature-settings: 'hlig' on, 'dlig' on;
@@ -491,7 +504,8 @@ html {
     /* 67px */
 }
 
-.banner__content-left__bottom {
+
+.wrapper__content-left__bottom {
     margin-top: 2rem;
     display: flex;
     position: relative;
@@ -582,95 +596,17 @@ html {
 
 
 
-@media (max-width: 1282px) {
-    .banner__content-right::before {
-        background-size: cover;
-    }
 
-    .banner__content-right__img {
-        bottom: -6rem;
-    }
-}
 
-@media (max-width: 767px) {
-    .banner {
-        display: flex;
-        flex-direction: column;
-        max-block-size: 100%;
-        /* border-radius: 10% 10% 53% 47% / 0% 0% 9% 10% ; */
-        padding-bottom: 0;
-    }
 
-    .clock__content {
-        width: 100%;
-    }
 
-    .clock {
-        margin-left: 0;
-        text-align: center;
-    }
 
-    .clock_svg {
-        left: 0;
-    }
 
-    .banner__title {
-        width: auto;
-    }
 
-    .header__container {
-        justify-content: center;
-    }
 
-    .header__number {
-        display: none;
-    }
 
-    .header__btn {
-        display: none;
-    }
 
-    .banner__result {
-        width: 100%;
-        display: block;
-    }
 
-    .banner__content-left__bottom {
-        flex-direction: column;
-        margin-top: 2rem;
-        display: flex;
-    }
-
-    .banner__content-right {
-        position: relative;
-        height: auto;
-        width: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .banner {
-        margin-bottom: 100px;
-    }
-
-    .banner__content-right::before {
-        display: none;
-    }
-
-    .banner__title {
-        font-size: 3rem;
-        margin-bottom: 5rem;
-    }
-
-    .banner__btn {
-        margin-bottom: .8rem;
-    }
-
-    .clock {
-        margin-bottom: 2.5rem;
-        width: 100%;
-    }
-}
 
 
 
@@ -693,30 +629,12 @@ z-index: 1;
 .who::before {
     content: url('../img/who/tree2.png');
     position: absolute;
-    width: 14.5rem;
-    height: 40rem;
     z-index: 1;
     bottom: -21.5rem;
     right: 7rem;
 }
 
 
-
-.title__wrapper {
-    text-align: center;
-}
-
-.title {
-    color: #2C1C00;
-    text-align: center;
-    font-family: PP Neue Montreal;
-    font-size: 4.5rem; /*5.5rem*/
-    font-style: normal;
-    font-weight: 500;
-    /*400*/
-    line-height: 100%;
-    /* 55px */
-}
 
 .who__title {
     max-width: 53.6rem;
@@ -733,8 +651,7 @@ z-index: 1;
     font-family: PP Neue Montreal;
     font-size: 1.6rem;
     font-style: normal;
-    font-weight: 500;
-    /*400*/
+    font-weight: 400;
     line-height: 100%;
     /* 16px */
 }
@@ -887,8 +804,6 @@ width: 71.2rem;
 .middle::before{
     content: url('../img/midlle/Tape2.png');
     position: absolute;
-
-
     right: 0;
     top: -6rem;
     z-index: 1;
@@ -920,18 +835,19 @@ width: 71.2rem;
 }
 
 
-.advantages__text-wrapper {
+.text-wrapper {
     display: flex;
     gap: 12rem;
     margin-bottom: 5.6rem;
+    align-items: flex-end;
 }
 
-.advantages__title {
+.text-wrapper__title {
     text-align: left;
     width: 63.3rem;
 }
 
-.advantages__text {
+.text-wrapper__text {
     color: #2C1C00;
 font-family: PP Neue Montreal;
 font-size: 1.6rem;
@@ -943,7 +859,9 @@ flex-direction: column;
 gap: 2rem;
 width: 60rem;
 }
-
+.text-wrapper__reviews{
+    margin-top: 16rem;
+}
 
 
 .advantages__list {
@@ -951,6 +869,19 @@ width: 60rem;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.6rem;
     margin-bottom: 8rem;
+    position: relative;
+    z-index: 2;
+}
+.advantages{
+    position: relative;
+}
+.advantages::after{
+    content: url('../img/advantages/tree.png');
+    position: absolute;
+    z-index: 1;
+    bottom: 10rem;
+    right: 0;
+    z-index: 1;
 }
 .advantages__list-item {
     border-radius: 2rem;
@@ -1033,7 +964,7 @@ font-feature-settings: 'hlig' on, 'dlig' on;
 font-family: PP Neue Montreal;
 font-size: 2.1rem;
 font-style: normal;
-font-weight: 500; /*400*/
+font-weight: 400;
 line-height: 100%;
 width: 46.8rem;
 }
@@ -1043,7 +974,7 @@ width: 46.8rem;
     font-family: PP Neue Montreal;
     font-size: 2.1rem;
     font-style: normal;
-    font-weight: 500; /*400*/
+    font-weight: 400;
     line-height: 100%;
     /* 21px */
 }
@@ -1056,9 +987,10 @@ width: 46.8rem;
     padding: 4rem 0;
     background-color: #FFFFFF;
 }
-.container {
-}
+
 .how__container {
+    display: flex;
+    gap: 10rem;
 }
 .how__content-left {
     width: 56.3rem;
@@ -1068,7 +1000,7 @@ width: 46.8rem;
 font-family: PP Neue Montreal;
 font-size: 5.5rem;
 font-style: normal;
-font-weight: 500; /*400*/
+font-weight: 400;
 line-height: 100%; /* 55px */
 margin-bottom: 19.5rem;
 }
@@ -1086,10 +1018,461 @@ margin-bottom: 19.5rem;
     font-family: PP Neue Montreal;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500; /*400*/
+    font-weight: 400; 
     line-height: 100%;
     /* 20px */
     letter-spacing: -0.4px;
 }
-.button {
+
+.how__content-right {
 }
+.how__content-right-img__wrapper {
+    width: 46.4rem;
+height: 48.5rem;
+position: relative;
+margin-right: 23.1rem;
+}
+.how__content-right-img--static {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+.how__content-right-img--absolut {
+    position: absolute;
+    right: -23.1rem;
+    top: 8rem;
+    border-radius: 2rem;
+    height: 62.5rem;
+}
+
+
+.swiper__container{
+    padding-bottom: 11.4rem;
+    position: relative;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    /* width: 48rem; */
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: url('../img/reviews/arrow.svg');
+    transform: rotate(180deg);
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: url('../img/reviews/arrow.svg');
+}
+.swiper__buttons{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide__img-wrapper {
+    width: 47rem;
+height: 48rem;
+position: relative;
+margin-bottom: 1.6rem;
+
+}
+.swiper__slide-img {
+    height: 100%;
+    width: 100%;
+}
+.swiper-slide__results-block {
+    display: flex;
+    justify-content: space-between;
+    width: 33.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.swiper-slide__results-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.swiper-slide__results-date,.swiper-slide__results-value {
+    background-color: #fff;
+    padding: 0.2rem 1rem;
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 450;
+line-height: 100%; /* 16px */
+letter-spacing: -0.32px;
+border-radius: 8rem;
+}
+.swiper-slide__text-bottom {
+}
+.swiper-slide__name {
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 2.4rem;
+font-style: normal;
+font-weight: 530;
+line-height: 100%; /* 24px */
+letter-spacing: -0.05rem;
+margin-bottom: 1.6rem;
+}
+.swiper-slide__bottom-result{
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 530;
+line-height: 100%; /* 16px */
+}
+.swiper-slide__text-value {
+    color: #2C1C00;
+font-variant-numeric: lining-nums proportional-nums;
+font-feature-settings: 'hlig' on, 'dlig' on;
+font-family: PP Neue Montreal;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 450;
+line-height: 100%; /* 16px */
+margin-top: 0.8rem;
+}
+.swiper-slide__bottom-result{
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 100%; /* 16px */
+}
+
+.working {
+}
+.container {
+}
+.working__container {
+    display: flex;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    justify-content: space-between;
+}
+.working__content-left {
+}
+.title {
+}
+.working__title {
+    text-align: left;
+}
+.working__content-left{
+    display: flex;
+    flex-direction: column;
+}
+.working__content-right {
+    border-radius: 20px;
+background: #FFFCE8;
+/* padding: 5rem 4rem; */
+display: flex;
+gap: 11rem;
+}
+.working__content-right__left-title {
+    display: inline-flex;
+    align-items: center;
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 2.4rem;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 24px */
+letter-spacing: -0.05rem;
+margin-bottom: 3.3rem;
+}
+.working__content-list {
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+    gap: 1.6rem;
+}
+.working__content-list__item {
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 21px */
+    position: relative;
+    padding-left: 1.7rem;
+}
+.working__content-list__item::before{
+    content: '';
+    height: 0.9rem;
+    width: 0.9rem;
+    background-color: #2C1C00;;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.working__content-right__left{
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 7.4rem;
+}
+.working__content-right__wrapper {
+    width: 15rem;
+height: 15rem;
+margin: 0.8rem;;
+}
+.working__content-right__wrapper-img {
+    width: 100%;
+    height: 100%;
+border-radius: 1.4rem;
+
+height: 18rem;
+width: 18rem;
+
+}
+.working--price{
+    width: 60.9rem;
+    margin-top: auto;
+}
+
+.faq{
+    padding-top: 12rem;
+    position: relative;
+    background-color: #FFFCE9;
+    padding-bottom: 12rem;
+}
+.faq::after{
+    content: '';
+    position: absolute;
+    height: 21rem;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image: url('../img/faq/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.accordeon__wrapper{
+    width: 79rem;
+    margin: 0 auto;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+font-size: 2.4rem;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 24px */
+letter-spacing: -0.48px;
+padding: 4.8rem 0 0;
+position: relative;
+padding-right: 2rem;
+}
+.accordion::after,.accordion::before{
+    content: '';
+    height: 0.18rem;
+    border-radius: 1rem;
+    width: 1.4rem;
+    background: #2C1C00;
+    position: absolute;
+    right: 0;
+    bottom: 1.2rem;
+    transition: all 0.3s ease-out;
+}
+
+.accordion::before{
+    right: 0;
+    transform: rotate(90deg);
+}
+.accordion.active::before{
+    transform: rotate(0deg);
+}
+.accordeon__wrapper{
+    position: relative;
+}
+.accordeon__wrapper::after{
+    content: '';
+    background-color: rgba(44, 28, 0, 0.30);
+    position: absolute;
+    bottom: -2.4rem;
+    left: 0;
+    right: 0;
+    height: 0.05rem;
+}
+.panel p {
+    padding-top: 2.4rem;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, .accordion:hover {
+    background-color: #ccc;
+} */
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #2C1C00;
+font-family: PP Neue Montreal;
+text-align: left;
+font-size: 2.1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 21px */
+}
+
+
+
+
+
+
+
+.footer {
+    border-radius: 2rem;
+background: #FFF;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.3rem 0;
+}
+
+.footer__link{
+    color: #2C1C00;
+    font-family: PP Neue Montreal;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 14px */
+}
+
+
+
+
+
+
+@media (max-width: 1282px) {
+    .banner__content-right::before {
+        background-size: cover;
+    }
+
+    .banner__content-right__img {
+        bottom: -6rem;
+    }
+    .middle::before{
+        top: -36rem;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        max-block-size: 100%;
+        /* border-radius: 10% 10% 53% 47% / 0% 0% 9% 10% ; */
+        padding-bottom: 0;
+    }
+
+    .clock__content {
+        width: 100%;
+    }
+
+    .clock {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .clock_svg {
+        left: 0;
+    }
+
+    .banner__title {
+        width: auto;
+    }
+
+    .header__container {
+        justify-content: center;
+    }
+
+    .header__number {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    .banner__result {
+        width: 100%;
+        display: block;
+    }
+
+    .banner__content-left__bottom {
+        flex-direction: column;
+        margin-top: 2rem;
+        display: flex;
+    }
+
+    .banner__content-right {
+        position: relative;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner {
+        margin-bottom: 100px;
+    }
+
+    .banner__content-right::before {
+        display: none;
+    }
+
+    .banner__title {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .banner__btn {
+        margin-bottom: .8rem;
+    }
+
+    .clock {
+        margin-bottom: 2.5rem;
+        width: 100%;
+    }
+    .who__list{
+        grid-template-columns: 1fr;
+    }
+    .who__list-item{
+        flex-direction: column;
+    }
+}
+
+
+
