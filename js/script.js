@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     new Swiper('.swiper', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 16,
-        // autoHeight: true,
+        breakpoints: {
+          796: {
+              slidesPerView: 3
+          }
+      },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

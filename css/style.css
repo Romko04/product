@@ -1612,7 +1612,18 @@ background: #FFF;
         top: -4rem;
     }
 
-
+    .text-wrapper__reviews{
+        margin-top: 8rem;
+    }
+    .text-wrapper{
+        gap: 2.4rem;
+    }
+    .swiper-slide__results-block{
+        margin: 0.8rem;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
+    }
 }
 
 
