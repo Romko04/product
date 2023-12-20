@@ -1579,6 +1579,40 @@ background: #FFF;
     .advantages__list-item{
         width: auto;
     }
+    .how__container{
+        flex-direction: column;
+    }
+    .how__content-left__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .how__content-left{
+        width: auto;
+    }
+    .how__content-left-title{
+        margin-bottom: 4.7rem;
+    }
+    .advantages__content-bottom{
+        padding-bottom: 8rem;
+    }
+    .how{
+        padding-top: 8rem;
+    }
+    .how__content-left__list-item{
+        flex-direction: row;
+    }
+    .how__content-right-img__wrapper{
+        width: 22.6rem;
+        height: 23.7rem;
+    }
+    .how__content-right-img--absolut{
+        width: 13.2rem;
+        height: 28.7rem;
+        right: -11.5rem;
+        top: -4rem;
+    }
+
+
 }
 
 
