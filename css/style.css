@@ -1498,6 +1498,40 @@ background: #FFF;
     .who::before {
         display: none;
     }
+    .about__container{
+        flex-direction: column;
+        padding: 0;
+    }
+    .about__content-left-img__wrapper{
+        width: 100%;
+        height: 38rem;
+    }
+    .about::before {
+        content: url('');
+    }
+    .about__content-left-img{
+        border-radius: 0;
+    }
+    .about__content-right{
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+    .about{
+        padding-top: 4rem;
+    }
+    .about__content-right__text p{
+        margin-top: 2.4rem;
+        font-size: 2rem;
+    }
+    .about__content-right__list{
+        display: none;
+    }
+    .about__content-right--title{
+        margin-top: 4rem;
+    }
+    .about__content-btn{
+        margin: 0 auto;
+    }
 }
 
 
