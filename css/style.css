@@ -1523,6 +1523,7 @@ background: #FFF;
     }
     .about__content-left-img{
         border-radius: 0;
+        height: 38rem;
     }
     .about__content-right{
         width: 100%;
@@ -1551,6 +1552,32 @@ background: #FFF;
         width: 62rem;
     height: 38rem;
     top: -15rem;
+    }
+    .text-wrapper{
+        flex-direction: column;
+    }
+    .advantages__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .text-wrapper__text{
+        font-size: 2rem;
+        width: auto;
+    }
+    .text-wrapper__title{
+        width: auto;
+    }
+    .advantages__bottom{
+        width: auto;
+    }
+    .advantages::after{
+        content: '';
+    }
+    .advantages__list-item__wrapper{
+        width: 100%;
+        height: 27.6rem;
+    }
+    .advantages__list-item{
+        width: auto;
     }
 }
 
