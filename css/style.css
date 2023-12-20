@@ -501,6 +501,7 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+    white-space: nowrap;
     /* 67px */
 }
 
