@@ -1624,6 +1624,28 @@ background: #FFF;
     .swiper-button-prev, .swiper-button-next{
         display: none;
     }
+    .working__container{
+        flex-direction: column-reverse;
+    }
+    .working__content-list{
+        width: auto;
+    }
+    .working__content-right__wrapper{
+        display: none;
+    }
+    .working__content-right__left{
+        padding-left: 4rem 1.6rem;
+    }
+    .working__content-list__item{
+        font-size: 1.6rem;
+    }
+    .working--price{
+        width: auto;
+        margin-top: 4rem;
+    }
+    .working__title{
+        display: none;
+    }
 }
 
 
