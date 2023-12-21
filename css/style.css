@@ -332,15 +332,14 @@ html {
     justify-content: space-between;
 }
 
-.header__number {
+.header__number, .footer__number {
     display: flex;
     align-items: center;
     gap: 1.1rem;
 }
 
-.header__number-link {}
 
-.header__link {
+.header__link, .footer--link {
     color: #181818;
     font-variant-numeric: lining-nums proportional-nums;
     font-feature-settings: 'hlig' on, 'dlig' on;
