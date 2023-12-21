@@ -83,7 +83,7 @@ td {
     font-family: 'PP Neue Montreal';
     font-weight: 500;
     font-style: normal;
-    src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+    src: url('/fonts/PPNeueMontreal-Medium.woff') format('woff');
 }
 
 @font-face {
