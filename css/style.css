@@ -90,8 +90,9 @@ td {
     font-family: 'ABeeZee';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/ABeeZee-Regular.ttf') format('woff');
+    src: url('../fonts/ABeeZee-Regular.woff') format('woff');
 }
+
 
 
 * {
