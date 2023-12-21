@@ -252,7 +252,7 @@ html {
 
 .ticker {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     z-index: 6;
 }
 
@@ -405,7 +405,7 @@ html {
 .banner {
     /* margin-top: 14.1rem; */
     /* margin-top: 9.7rem; */
-    padding-top: 9.7rem;
+    padding-top: 12.7rem;
     background: #FFFCE8;
     overflow: hidden;
     max-block-size: 89.5rem;
@@ -458,7 +458,7 @@ html {
     line-height: 100%;
     /* 50px */
     position: relative;
-    padding-right: 3rem;
+    padding-right: 2rem;
     display: inline-block;
 
 }
@@ -467,9 +467,9 @@ html {
     content: '®';
     position: absolute;
     color: #F5991A;
-    height: 0.4rem;
+    height: 5rem;
     right: 0;
-    top: .3rem;
+    /* top: .3rem; */
     font-size: 3.2rem;
 }
 .title-link::after{
@@ -479,7 +479,7 @@ html {
     height: 0.4rem;
     right: 3rem;
     left: 0;
-    bottom: 0;
+    bottom: -0.4rem;
 }
 
 .banner__result {
@@ -556,8 +556,8 @@ html {
 .clock {
     display: flex;
     position: relative;
-    margin-left: 4.6rem;
-
+    margin-left: -1.6rem;
+    align-items: center;
 }
 
 .clock__content {
@@ -600,6 +600,23 @@ html {
     line-height: 100%;
     /* 35px */
 }
+.clock__svg-wrapper{
+    height: 6.2rem;
+    width: 6.2rem;
+    background-color: #F5991A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.4rem solid #FFFCE8;
+    position: relative;
+    right: -3.1rem;
+
+}
+.clock__img-svg{
+    width: 2.5rem;
+    height: 2.5rem;
+}
 
 .banner__content-right__img {
     position: relative;
@@ -608,7 +625,7 @@ html {
 .banner__content-right {
     position: absolute;
     right: 0;
-    top: -2rem;
+    top: 1rem;
     height: 75.8rem;
     width: 71%;
     display: flex;
@@ -879,7 +896,9 @@ width: 71.2rem;
     background-color: #FFFCE8;;
 }
 
-
+/* .advantages__title-link{
+    font-weight: 400!important;
+} */
 .text-wrapper {
     display: flex;
     gap: 12rem;
@@ -974,6 +993,7 @@ transition: all 0.3s ease-out;
     cursor: pointer;
     padding-right: 1.6rem;
     position: relative;
+    margin-bottom: 1.6rem;
 }
 .advantages__list-item__btn::after{
     content: url('../img/advantages/arrow.svg');
@@ -988,7 +1008,7 @@ transition: all 0.3s ease-out;
     color: #2C1C00;
     font-family: 'PP Neue Montreal';
     font-size: 1.6rem;
-    margin-top: 1.6rem;
+    /* margin-top: 1.6rem; */
     font-style: normal;
     font-weight: 500; /* 400 */
     line-height: 110%; /* 17.6px */
@@ -996,7 +1016,7 @@ transition: all 0.3s ease-out;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    margin-bottom: 1.6rem;
+    /* margin-bottom: 1.6rem; */
 }
 
 
@@ -1077,8 +1097,7 @@ margin-bottom: 19.5rem;
     letter-spacing: -0.4px;
 }
 
-.how__content-right {
-}
+
 .how__content-right-img__wrapper {
     width: 46.4rem;
 height: 48.5rem;
@@ -1108,31 +1127,36 @@ margin-right: 23.1rem;
     flex-direction: column;
     /* width: 48rem; */
 }
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
     content: url('../img/reviews/arrow.svg');
     font-size: 0!important;
     position: absolute;
 }
-.swiper-button-next,.swiper-button-prev{
+
+.reviews__link{
+    font-weight: 400;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
     background: #fff;
     height: 4.6rem;
     width: 4.6rem;
     border-radius: 50%;
-    /* display: flex;
-    justify-self: center;
-    align-items: center; */
     
 }
 
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
     content: url('../img/reviews/arrow.svg');
     font-size: 0!important;
     transform: rotate(180deg);
-
 }
-.swiper-button-next:hover{
 
-}
+
+
+
 .swiper__buttons{
     position: absolute;
     bottom: 0;
@@ -1149,6 +1173,7 @@ position: relative;
 margin-bottom: 1.6rem;
 
 }
+
 .swiper__slide-img {
     height: 100%;
     width: 100%;
@@ -1184,8 +1209,7 @@ line-height: 100%; /* 16px */
 letter-spacing: -0.32px;
 border-radius: 8rem;
 }
-.swiper-slide__text-bottom {
-}
+
 .swiper-slide__name {
     color: #2C1C00;
 font-family: 'PP Neue Montreal';
@@ -1224,20 +1248,14 @@ margin-top: 0.8rem;
     line-height: 100%; /* 16px */
 }
 
-.working {
-}
-.container {
-}
+
 .working__container {
     display: flex;
     padding-top: 12rem;
     padding-bottom: 12rem;
     justify-content: space-between;
 }
-.working__content-left {
-}
-.title {
-}
+
 .working__title {
     text-align: left;
     max-width: 43rem;
@@ -1506,7 +1524,13 @@ background: #FFFCE8;
     right: 1.6rem;
     top: 1.6rem;
 }
-
+.popup__close-line{
+    stroke: #2C1C00;
+    transition: all ease .1s;
+}
+.popup__close:hover .popup__close-line{
+    opacity: 0.7;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -1540,6 +1564,9 @@ margin-bottom: 4rem;
     border: 0.1rem solid rgba(0, 0, 0, 0.20);
     background: #FFF;
     margin-bottom: .8rem;
+}
+.form__input:hover, .form__input:focus{
+    border: 1px solid #000;
 }
 .form__button{
     margin-top: 3.2rem;
@@ -1686,7 +1713,10 @@ z-index: 2;
     .banner__title {
         width: auto;
     }
-
+    .clock__svg-wrapper {
+        position: absolute;
+        left: 0;
+    }
     .header__container {
         justify-content: center;
     }
@@ -1964,6 +1994,7 @@ z-index: 2;
     .button{
         width: 34.4rem;
         padding: 2.1rem 4rem;
+        z-index: 3;
     }
 }
 
@@ -1989,6 +2020,17 @@ z-index: 2;
 }
 .button:hover{
     background: #FAB14D;
+}
+.swiper-button-next:hover:after,
+.swiper-rtl .swiper-button-prev:hover:after {
+    position: absolute;
+    right: 11px; /* Зсув на 3 пікселя вправо */
+}
+
+.swiper-button-prev:hover:after,
+.swiper-rtl .swiper-button-next:hover:after {
+    position: absolute;
+    left: 11px; /* Зсув на 3 пікселя вліво */
 }
 
 }

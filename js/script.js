@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (nextElement) {
           nextElement.classList.toggle('active');
           nextElement.style.maxHeight = nextElement.classList.contains('active') ? nextElement.scrollHeight + 'px' : 0;
+          nextElement.style.marginBottom = nextElement.classList.contains('active') ? 16 + 'px' : 0;
       }
     }
     if (e.target.closest('.button--popup')) {
