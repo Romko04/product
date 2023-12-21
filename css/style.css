@@ -576,7 +576,7 @@ html {
     font-family: 'PP Neue Montreal';
     font-size: 3.5rem;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     line-height: 100%;
     /* 35px */
 }
@@ -704,7 +704,7 @@ z-index: 1;
     font-family: 'PP Neue Montreal';
     font-size: 2.5rem;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     line-height: 100%;
     /* 25px */
 }
@@ -801,7 +801,7 @@ width: 71.2rem;
     font-family: 'PP Neue Montreal';
     font-size: 2rem;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     line-height: 110%; /* 23.1px */
 }
 .about__content-btn{
@@ -876,7 +876,7 @@ width: 71.2rem;
 font-family: 'PP Neue Montreal';
 font-size: 1.6rem;
 font-style: normal;
-font-weight: 530;
+font-weight: 500;
 line-height: 100%; /* 16px */
 display: flex;
 flex-direction: column;
@@ -932,7 +932,7 @@ transition: all 0.3s ease-out;
     font-family: 'PP Neue Montreal';
     font-size: 2rem;
     font-style: normal;
-    font-weight: 500;/* 400 */
+    font-weight: 400;/* 400 */
     line-height: 100%; 
     letter-spacing: -0.4px;
     margin: 1.6rem 0 4rem;
@@ -1166,7 +1166,7 @@ font-feature-settings: 'hlig' on, 'dlig' on;
 font-family: 'PP Neue Montreal';
 font-size: 1.6rem;
 font-style: normal;
-font-weight: 450;
+font-weight: 400;
 line-height: 100%; /* 16px */
 margin-top: 0.8rem;
 }
