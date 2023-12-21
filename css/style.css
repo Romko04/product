@@ -253,7 +253,7 @@ html {
 .ticker {
     overflow: hidden;
     position: fixed;
-    z-index: 6;
+    z-index: 5;
 }
 
 .ticker__wrapper {
@@ -274,6 +274,7 @@ html {
     /* 12px */
     text-transform: uppercase;
     animation: trickerAnimation 5s linear infinite;
+    -webkit-animation: trickerAnimation 5s linear infinite;
     position: relative;
 
 }
@@ -1563,6 +1564,25 @@ margin-bottom: 4rem;
     border: 0.1rem solid rgba(0, 0, 0, 0.20);
     background: #FFF;
     margin-bottom: .8rem;
+    width: 100%;
+    position: relative;
+}
+.input__box.error .form__input{
+    border: 0.1rem solid #E33529;
+}
+.input__box{
+    position: relative;
+}
+
+.error__svg{
+    position: absolute;
+    display: none;
+    right: 1.6rem;
+    top: 45%;
+    transform: translateY(-50%);
+}
+.input__box.error  .error__svg{
+    display: block;
 }
 .form__input:hover, .form__input:focus{
     border: 1px solid #000;
@@ -1575,6 +1595,7 @@ margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10rem;
 }
 .thanks__button{
     width: 100%;
@@ -1639,8 +1660,7 @@ margin-bottom: 4rem;
 .thanks__content {
     text-align: center;
 }
-.title {
-}
+
 .thanks__title {
 font-family: 'PP Neue Montreal';
 font-size: 5.5rem;
@@ -1649,6 +1669,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 100%; /* 55px */
 margin: 0 auto;
+margin-bottom: 11.7rem;
 }
 .thanks__sub-title{
     color: var(--01-text-color, #2C1C00);
