@@ -452,6 +452,7 @@ html {
     height: 0.4rem;
     right: 0;
     top: .3rem;
+    font-size: 3.2rem;
 }
 .title-link::after{
     content: '';
