@@ -68,7 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (validation(this)) {
       // Clear errors after successful submission if needed
       const allInputs = this.querySelectorAll('input');
-      allInputs.forEach(input => removeError(input));
+      allInputs.forEach(input => {
+        input.value = ''
+        removeError(input)
+      });
 
       // Your success handling code here
       document.querySelector('.popup--form').classList.remove('active');
