@@ -1745,7 +1745,7 @@ z-index: 2;
 }
 .form__proccent {
 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3.2rem;
 }
 .form__content-text{
@@ -1754,7 +1754,7 @@ z-index: 2;
     gap: 1.6rem;
 }
 .form__content-text-score {
-    font-weight: 600;
+    font-weight: 500;
 }
 .form__content-text-edits {
     margin-left: 4rem;
@@ -1772,7 +1772,7 @@ z-index: 2;
     cursor: pointer;
     border-radius: 1rem;
     padding: 2rem 0;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1794,7 +1794,7 @@ z-index: 2;
     border: none;
     cursor: pointer;
     text-align: right;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2rem;
     border: 1px solid silver;
     width: 8rem;
