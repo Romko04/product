@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 16,
     breakpoints: {
-      796: {
+      763: {
         slidesPerView: 3
-      }
+      },
     },
     navigation: {
       nextEl: '.swiper-button-next',
