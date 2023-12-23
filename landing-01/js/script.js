@@ -1,3 +1,49 @@
+function generateUUID() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0,
+          v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+  });
+}
+
+function submitForm() {
+  const firstName = $('[name="name"]').val();
+  const email = $('[name="email"]').val();
+  const phone = $('[name="phone"]').val();
+
+  const userData = {
+      name: {
+          firstName: firstName
+      },
+      email: email,
+      phone: phone,
+      userId: generateUUID(), // Генерация уникального идентификатора
+      program: 'APP30',
+      package: '30',
+  };
+
+  // Пример валидации и вывода данных в консоль
+  $.ajax({
+      url: '/api/users_plus_invoice',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(userData),
+      success: function(response) {
+          if (response.redirectUrl) {
+              // Перенаправляем на указанный URL
+              window.location.href = response.redirectUrl;
+          } else {
+              // Ваша текущая логика обработки успешного ответа
+              // Например, отображение сообщения об успешной отправке
+              // или выполнение других действий
+          }
+      },
+      error: function(error) {
+          console.error('Ошибка при отправке данных:', error);
+      }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.swiper', {
     slidesPerView: 1,
@@ -66,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     if (validation(this)) {
+      submitForm()
       // Clear errors after successful submission if needed
       const allInputs = this.querySelectorAll('input');
       allInputs.forEach(input => {
