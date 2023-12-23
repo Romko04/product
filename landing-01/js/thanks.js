@@ -191,22 +191,24 @@ document.addEventListener('DOMContentLoaded', function () {
     function submitForm(data) {
         // Ваш код для відправлення даних на сервер
         // Я використав ваш приклад Ajax-запиту
-        $.ajax({
-            url: '/api/update_data',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(data),
-            success: function (response) {
-                if (response.redirectUrl) {
-                    // Перенаправлення на вказаний URL
-                    window.location.href = response.redirectUrl;
-                } else {
-                    // Ваша логіка обробки успішної відповіді
-                }
-            },
-            error: function (error) {
-                console.error('Помилка при відправленні даних на сервер:', error);
-            }
-        });
+        $.ajax({ 
+            url: '/api/update_data', 
+            type: 'POST', 
+            contentType: 'application/json', 
+            data: JSON.stringify(userData), 
+            success: function(response) { 
+                if (response.redirectUrl) { 
+                    // Перенаправляем на указанный URL 
+                    window.location.href = response.redirectUrl; 
+                } else { 
+                    // Ваша текущая логика обработки успешного ответа 
+                    // Например, отображение сообщения об успешной отправке 
+                    // или выполнение других действий 
+                } 
+            }, 
+            error: function(error) { 
+                console.error('Ошибка при отправке данных:', error); 
+            } 
+        }); 
     }
 });
